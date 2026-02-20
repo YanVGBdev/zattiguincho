@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zatti Guincho | Auto Socorro e Resgate 24h</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        alerta: '#facc15',
+                        urgencia: '#dc2626',
+                        verdeRS: '#007a33',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #1a1a1a; margin: 0; }
+
+        /* Background Fixo */
+        .bg-fixed-custom {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        /* Animação de Pulso */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(250, 204, 21, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 0 35px rgba(250, 204, 21, 0.6); }
+        }
+        .animate-cta { animation: pulse-soft 2s infinite ease-in-out; }
+
+        /* Card Padronizado com Hover */
+        .card-service {
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+        .card-service:hover {
+            transform: translateY(-8px);
+            background: rgba(35, 35, 35, 0.95);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .bg-fixed-custom { background-attachment: scroll; }
+        }
+    </style>
+</head>
+<body class="text-white font-sans antialiased">
+
+    <div class="bg-fixed-custom">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-dark/95 border-b border-alerta/20 backdrop-blur-md">
+            <nav class="container mx-auto px-4 py-1.5 flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="logotipo.jpg" alt="Zatti Guincho Logo" class="h-10 md:h-12 w-auto object-contain">
+                </div>
+
+                <a href="https://wa.me/5551995069372" target="_blank" class="bg-alerta hover:bg-white text-dark font-black py-2 px-4 rounded-lg text-xs md:text-sm transition-all transform active:scale-95 flex items-center gap-2 uppercase tracking-tighter">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2.019c-5.505 0-9.989 4.484-9.989 9.989 0 1.763.462 3.419 1.272 4.856l-1.353 4.939 5.056-1.326c1.405.766 3.012 1.206 4.717 1.206 5.505 0 9.989-4.484 9.989-9.989 0-5.505-4.484-9.989-9.989-9.989zm5.222 14.122c-.225.63-.1.1.1.1-.383.1.1-.763.51-1.321.432-1.218 1.155-1.503 1.155-1.503.225-.135.585-.135.81.045.225.18.9 1.125.9 1.125s.18.225.045.541c-.135.315-.541.676-.541.676s-.27.27-.631.27c-.361 0-.946-.225-1.532-.495-.585-.27-1.44-.766-2.115-1.352-.676-.585-1.261-1.306-1.622-1.936-.361-.631-.585-1.126-.585-1.126s-.045-.36.18-.585c.225-.225.585-.541.81-.766.225-.225.315-.405.45-.585.135-.18.045-.495-.045-.676-.09-.18-.855-2.071-.855-2.071s-.135-.315-.45-.315c-.315 0-.585.045-.855.315s-1.08 1.036-1.08 2.522c0 1.486.585 2.927 1.622 4.143 1.036 1.216 2.477 2.116 4.098 2.566.27.09.495.135.72.135.225 0 .45-.045.676-.135z"/></svg>
+                    Chamar Agora
+                </a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-20 px-4">
+            <div class="container mx-auto text-center relative z-10">
+                <span class="inline-block bg-alerta text-dark rounded-full px-6 py-1 text-xs font-black uppercase tracking-widest mb-6">
+                    Atendimento Emergencial 24h
+                </span>
+                
+                <h1 class="font-montserrat text-5xl md:text-8xl font-black mb-2 leading-tight uppercase drop-shadow-2xl italic tracking-tighter">
+                    ZATTI GUINCHO
+                </h1>
+                
+                <h2 class="font-montserrat text-2xl md:text-4xl font-extrabold mb-10 text-alerta uppercase tracking-wide drop-shadow-md">
+                    Socorro e Resgate 24h
+                </h2>
+
+                <p class="text-gray-100 text-lg md:text-2xl max-w-3xl mx-auto mb-12 font-medium italic opacity-90">
+                    Atendimento rápido, seguro e com preço justo. <span>Estamos prontos para te ajudar a qualquer hora do dia ou da noite.</span> <span>Guincho 24 hrs em</span> <span>📍Canoas</span>, <span>Porto Alegre</span>, <span>Região Metropolitana</span>, <span>Interior</span>, <span>Litoral</span> e <span>Inter Estadual</span>.
+                </p>
+                
+                <a href="https://wa.me/5551995069372" class="animate-cta inline-block w-full sm:w-auto bg-alerta text-dark font-black text-2xl py-6 px-12 rounded-2xl hover:bg-white transition-all uppercase tracking-tighter">
+                    SOLICITAR GUINCHO AGORA
+                </a>
+                
+                <p class="mt-8 text-white font-black text-3xl drop-shadow-md tracking-tighter italic">
+                    <span class="text-alerta text-4xl leading-none">📞</span> (51) 99506-9372
+                </p>
+            </div>
+        </section>
+
+        <!-- Cidades (Verde RS) -->
+        <section class="py-6 bg-black/70 backdrop-blur-sm border-y border-white/5">
+            <div class="container mx-auto px-4 text-center">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[11px] md:text-sm font-black uppercase text-verdeRS tracking-widest italic">
+                    <span> Porto Alegre</span> <span>📍 Canoas</span> <span>Região Metropolitana</span> <span>Litoral</span> <span>Interior do Estado</span> <span>Inter Estadual</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços (Cards Padronizados com Cores Específicas) -->
+        <section class="py-20 container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 - Verde -->
+                <div class="card-service p-8 rounded-3xl border-2 border-verdeRS/30 flex flex-col">
+                    <div class="text-verdeRS text-5xl mb-6">🚑</div>
+                    <h3 class="font-montserrat text-xl font-black mb-4 uppercase leading-tight text-verdeRS">Auto Socorro 24 Horas</h3>
+                    <p class="text-gray-200 leading-relaxed font-medium text-sm">Oferecemos serviços seguros e com rapidez de auto socorro de carros, motos, vans, SUVs e utilitários.</p>
+                </div>
+                <!-- Card 3 - Vermelho -->
+                <div class="card-service p-8 rounded-3xl border-2 border-urgencia/30 flex flex-col">
+                    <div class="text-urgencia text-5xl mb-6">⚠️</div>
+                    <h3 class="font-montserrat text-xl font-black mb-4 uppercase leading-tight text-urgencia">Acidentes de Trânsito</h3>
+                    <p class="text-gray-200 leading-relaxed font-medium text-sm">Transporte especializado para veículos envolvidos em acidentes com cuidado extremo e presteza.</p>
+                </div>
+                <!-- Card 2 - Amarelo (Destaque Central) -->
+                <div class="card-service p-8 rounded-3xl border-2 border-alerta flex flex-col shadow-2xl md:scale-105 z-10 bg-dark/95">
+                    <div class="text-alerta text-5xl mb-6">⚙️</div>
+                    <h3 class="font-montserrat text-xl font-black mb-4 uppercase leading-tight text-alerta">Veículos Quebrados</h3>
+                    <p class="text-white leading-relaxed font-medium text-sm">Guinchamento e reboque de veículos com problemas mecânicos, garantindo chegada segura ao seu destino.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Seção Diferenciais (Fundo Dark 50% Transparência) -->
+        <section class="py-16 bg-dark/50 backdrop-blur-md text-white shadow-2xl border-y border-white/5">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-4xl mb-2">🏆</span>
+                        <h4 class="font-montserrat font-black uppercase text-lg leading-tight text-white">Experiência Comprovada</h4>
+                        <p class="text-white/80 text-sm">Anos de atuação no mercado de reboque e remoção.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-4xl mb-2">⚡</span>
+                        <h4 class="font-montserrat font-black uppercase text-lg leading-tight text-white">Atendimento Ágil</h4>
+                        <p class="text-white/80 text-sm">Rapidez no atendimento, sem comprometer a segurança.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-4xl mb-2">🗓️</span>
+                        <h4 class="font-montserrat font-black uppercase text-lg leading-tight text-white">Disponibilidade Total</h4>
+                        <p class="text-white/80 text-sm">24 horas por dia, incluindo domingos e feriados.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-4xl mb-2">🤝</span>
+                        <h4 class="font-montserrat font-black uppercase text-lg leading-tight text-white">Transparência</h4>
+                        <p class="text-white/80 text-sm">Orçamentos claros e sem surpresas no valor final.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/95 pt-16 pb-10">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                    
+                    <!-- Foto caminhão Truck Footer -->
+                    <div class="flex justify-center md:justify-start">
+                        <img src="truck-footer.jpg" alt="Zatti Guincho Truck" class="h-32 md:h-44 w-auto rounded-2xl shadow-2xl border border-white/10 transform rotate-1">
+                    </div>
+                    
+                    <!-- Meio: Contatos -->
+                    <div class="text-center">
+                        <p class="text-alerta font-black text-4xl mb-2 italic tracking-tighter leading-none">(51) 99506-9372</p>
+                        <div class="flex justify-center gap-4 mt-6">
+                            <a href="https://instagram.com/zatti_guincho" target="_blank" class="bg-white/5 p-4 rounded-2xl hover:bg-alerta hover:text-dark transition-all border border-white/10">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61579836901957" target="_blank" class="bg-white/5 p-4 rounded-2xl hover:bg-blue-600 hover:text-white transition-all border border-white/10">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Lado Direito: Localização & Slogan -->
+                    <div class="flex flex-col items-center md:items-end gap-2 text-center md:text-right">
+                         <div class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em]">Rio Grande do Sul</div>
+                         <div class="h-px w-20 bg-zinc-800"></div>
+                         <div class="text-verdeRS text-[10px] font-bold uppercase tracking-widest italic leading-relaxed">Porto Alegre e Região Metropolitana</div>
+                    </div>
+
+                </div>
+                <p class="text-center text-zinc-800 text-[9px] mt-12 uppercase font-bold tracking-widest italic">
+                    © 2026 Zatti Guincho - Agilidade e Segurança em Reboque e Remoção.
+                </p>
+            </div>
+        </footer>
+
+        <!-- CTA WhatsApp Flutuante -->
+        <a href="https://wa.me/5551995069372" target="_blank" class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 md:p-5 rounded-2xl shadow-2xl hover:scale-110 transition-transform active:scale-95 animate-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-9 md:w-9" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.481 5.228 3.481 8.403c0 6.557-5.332-11.888-11.888-11.888-2.003 0-3.974-.505-5.719-1.465l-6.265 1.691zm6.138-4.321l.44.261c1.554.923 3.328 1.411 5.143 1.411 5.503 0 9.981-4.478 9.981-9.981 0-2.664-1.037-5.168-2.921-7.051-1.883-1.883-4.387-2.92-7.053-2.92-5.505 0-9.983 4.478-9.983 9.982 0 1.895.524 3.738 1.516 5.34l.288.468-.894 3.268 3.336-.902zm11.231-5.15c-.247-.124-1.464-.723-1.691-.806-.227-.083-.392-.124-.557.124-.165.248-.64.806-.784.97-.145.166-.29.186-.537.063-.247-.124-1.044-.385-1.988-1.227-.735-.656-1.231-1.467-1.375-1.714-.144-.247-.015-.38.109-.504.113-.111.247-.289.371-.434.124-.145.165-.248.247-.413.083-.165.041-.309-.02-.434-.061-.124-.557-1.343-.763-1.841-.201-.486-.403-.42-.557-.428-.145-.008-.309-.01-.475-.01s-.434.062-.66.31c-.227.247-.866.847-.866 2.066s.887 2.396 1.011 2.561c.124.165 1.745 2.665 4.227 3.737.59.255 1.051.408 1.411.522.593.189 1.132.162 1.558.098.475-.071 1.464-.598 1.671-1.176.206-.578.206-1.073.144-1.176-.062-.103-.227-.165-.474-.289z"/></svg>
+        </a>
+
+    </div>
+
+</body>
+</html>
